@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4c0616a-1fef-4660-92f4-45e75905c286" name="Default Changelist" comment="Last version before the meeting">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/CategoryEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/Core.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/HostilityStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/Source.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend-rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend-rest-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/Item.java" afterDir="false" />
-    </list>
+    <list default="true" id="d4c0616a-1fef-4660-92f4-45e75905c286" name="Default Changelist" comment="2 more changes from prev commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +72,7 @@
       <workItem from="1625080717739" duration="2591000" />
       <workItem from="1625125337470" duration="9239000" />
       <workItem from="1625147859734" duration="1264000" />
-      <workItem from="1625170914836" duration="568000" />
+      <workItem from="1625170914836" duration="899000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1625083636579</created>
@@ -113,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1625172341146</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Test data is changed with given model">
+      <created>1625172910183</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1625172910185</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2 more changes from prev commit">
+      <created>1625172947856</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1625172947857</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +140,8 @@
     <MESSAGE value="See this items in alert with objects" />
     <MESSAGE value="See these items in alert with objects" />
     <MESSAGE value="Last version before the meeting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last version before the meeting" />
+    <MESSAGE value="Test data is changed with given model" />
+    <MESSAGE value="2 more changes from prev commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 more changes from prev commit" />
   </component>
 </project>
