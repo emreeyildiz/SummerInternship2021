@@ -7,6 +7,7 @@ import { StyledButton } from "../App.style";
 import React from "react";
 import axios from "axios";
 import ItemService from "../services/ItemService";
+import {keys} from "@material-ui/core/styles/createBreakpoints";
 
 type Props = {
     //cartItems: CartItemType[];
@@ -27,7 +28,8 @@ const Cart: any= ({cartItem, addToCart, createdFrom}) => {
         ).then(r => {
             console.log(r);
         })
-        console.log(createdFrom);
+
+        alert("Item is created from\n" + JSON.stringify(createdFrom));
     };
 
     return (
