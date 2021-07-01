@@ -16,16 +16,18 @@ type Props = {
 
 
 
-const Cart: any= ({cartItem, addToCart}) => {
+const Cart: any= ({cartItem, addToCart, createdFrom}) => {
 
     const saveItem = () => {
-        console.log("-------" , cartItem);
+        if(!cartItem.feature1){
+            return alert("Feature 1 must be selected");
+        }
         axios.post('http://localhost:8080/api/item',
             cartItem
         ).then(r => {
             console.log(r);
         })
-
+        console.log(createdFrom);
     };
 
     return (

@@ -21,8 +21,12 @@ const App =() =>{
     const [cartOpen, setCartOpen] = useState(false);
     const [cartItem, setCartItem] = useState<CartItemType>({idx: -1});
     const [itemList, setItemList] = useState<CartItemType[]>([]);
+    const [createdFrom, setCreatedFrom] = useState<CartItemType[]>([]);
 
     const handleAddToCart = (clickedItem: CartItemType, propID, key) => {
+
+        setCreatedFrom({...createdFrom, [key] : clickedItem});
+
         setCartItem({...cartItem, [key] : clickedItem[key]});
     };
 
@@ -42,6 +46,7 @@ const App =() =>{
                 <Cart
                     cartItem = {cartItem}
                     addToCart = {handleAddToCart}
+                    createdFrom = {createdFrom}
                 />
             </Drawer>
             <ButtonWrapper>

@@ -5,111 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4c0616a-1fef-4660-92f4-45e75905c286" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Havelsan2021.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_48.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_48.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_48.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_4_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_4_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_sync_4_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend (1).iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-hello-world/backend-hello-world (1).iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-hello-world/backend-hello-world.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-hello-world/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/backend-rest-api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/api/ItemApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/repository/ItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/resources/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/com/backend/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/com/backend/api/ItemApi.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/com/backend/entity/Item.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/com/backend/repository/ItemRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/backend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.idea/client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/App.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Cart/Cart.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Cart/Cart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/CartItem/CartItem.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/CartItem/CartItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Item/Item.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Item/Item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/data/MOCK_DATA-2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/data/MOCK_DATA.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/data/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/services/ItemService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Cart/Cart.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,17 +37,6 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/client/node_modules/typescript/lib" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend-rest-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.backend.Application" />
@@ -169,11 +56,36 @@
       <workItem from="1625041928992" duration="177000" />
       <workItem from="1625060803818" duration="135000" />
       <workItem from="1625062225339" duration="109000" />
-      <workItem from="1625080717739" duration="2386000" />
+      <workItem from="1625080717739" duration="2591000" />
+      <workItem from="1625125337470" duration="3412000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1625083636579</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1625083636580</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>
