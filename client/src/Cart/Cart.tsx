@@ -7,7 +7,6 @@ import { StyledButton } from "../App.style";
 import React from "react";
 import axios from "axios";
 import ItemService from "../services/ItemService";
-import {keys} from "@material-ui/core/styles/createBreakpoints";
 
 type Props = {
     //cartItems: CartItemType[];
@@ -39,11 +38,6 @@ const Cart: any= ({cartItem, addToCart, createdFrom}) => {
                       item={cartItem}
                       addToCart = {addToCart}
             />
-
-            {/*<Button color = "primary" onClick={() => {cartItem.title === "" ? alert("Title must be selected") : alert("item is created")}}>*/}
-            {/*    Create*/}
-            {/*    <CreateIcon/>*/}
-            {/*</Button>*/}
 
             <Button color = "primary" onClick={() => saveItem()}>
                 Create
