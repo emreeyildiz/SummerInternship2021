@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
     border-radius: 20px;
     height: 100%;
     
+
     button{
     border-radius: 0 0 20px 20px;
     right: 0;
@@ -20,5 +21,18 @@ export const Wrapper = styled.div`
         padding: 3rem;
         height: 100%;
         grid-template-columns: 1fr 1fr;
+    }
+    
+    h2 {
+        text-align: center;
+        color: #32a6a8;
+        font-family: "Lucida Console", "Courier New", monospace;
+        text-decoration: underline;
+        
+        
+    }
+    
+    li {
+        color: #3294a8;
     }
 `;

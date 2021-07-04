@@ -7,6 +7,7 @@ import { StyledButton } from "../App.style";
 import React from "react";
 import axios from "axios";
 import ItemService from "../services/ItemService";
+import {create} from "domain";
 
 type Props = {
     //cartItems: CartItemType[];
@@ -19,22 +20,23 @@ type Props = {
 const Cart: any= ({cartItem, addToCart, createdFrom}) => {
 
     const saveItem = () => {
-        if(!cartItem.feature1){
-            return alert("Feature 1 must be selected");
-        }
+        console.log(cartItem);
+        // if(!cartItem.feature1){
+        //     return alert("Feature 1 must be selected");
+        // }
         axios.post('http://localhost:8080/api/item',
             cartItem
         ).then(r => {
             console.log(r);
         })
 
-        alert("Item is created from\n" + JSON.stringify(createdFrom));
+        // alert("Item is created from\n" + JSON.stringify(createdFrom));
+        console.log(createdFrom)
     };
 
     return (
         <Wrapper>
-            <h2> Result Object </h2>
-            <CartItem key = {cartItem.idx}
+            <CartItem
                       item={cartItem}
                       addToCart = {addToCart}
             />

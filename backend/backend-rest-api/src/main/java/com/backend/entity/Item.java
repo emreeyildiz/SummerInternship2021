@@ -13,8 +13,7 @@ import java.util.List;
 
 public class Item implements Serializable {
     @Id
-    private String id;
-    
+    public String id;
     @NotNull
     Core core;
     Status status;
@@ -24,12 +23,19 @@ public class Item implements Serializable {
     public Item() {
     }
 
-    public Item(@NotNull Core core, Status status, Type type, List<Source> sourceList) {
+    public Item(String id ,@NotNull Core core, Status status, Type type, List<Source> sourceList) {
+        this.id = id;
         this.core = core;
         this.status = status;
         this.type = type;
         this.sourceList = sourceList;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id){this.id = id;}
 
     public Core getCore() {
         return core;
