@@ -8,6 +8,7 @@ import Cart from './Cart/Cart'
 import "./App.css";
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
+import {LinearProgress} from "@material-ui/core";
 
 
 
@@ -153,6 +154,7 @@ const App =() =>{
 
         console.log(cartItem);
         console.log(clickedItem[key]);
+
     };
 
     useEffect(() => {
@@ -163,7 +165,9 @@ const App =() =>{
             });
     }, []);
 
-
+    if(itemList.length === 0){
+        return <LinearProgress/>
+    }
 
     return (
         <Wrapper>

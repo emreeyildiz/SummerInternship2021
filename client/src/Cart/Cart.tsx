@@ -27,6 +27,7 @@ const Cart: any= ({cartItem, addToCart, createdFrom}) => {
 
                 ).then(r2 => {
                     console.log(r2)
+                    window.location.reload()
                 }, error => {
                     console.log("error on createdFrom ");
                     console.log(error)
@@ -38,8 +39,6 @@ const Cart: any= ({cartItem, addToCart, createdFrom}) => {
         }, error => {
             console.log(error)
         })
-
-
     };
 
     return (
