@@ -4,21 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4c0616a-1fef-4660-92f4-45e75905c286" name="Default Changelist" comment="2 more changes from prev commit">
+    <list default="true" id="d4c0616a-1fef-4660-92f4-45e75905c286" name="Default Changelist" comment="New Item created from is ready to post backend">
+      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/api/CreatedFromApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/CreatedFrom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/SourceKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/repository/CreatedFromRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/entity/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/com/backend/entity/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/com/backend/entity/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/api/ItemApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/api/ItemApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/repository/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/com/backend/api/ItemApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/com/backend/api/ItemApi.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Cart/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CartItem/CartItem.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CartItem/CartItem.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CartItem/CartItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Item/Item.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Item/Item.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Item/Item.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,8 +57,25 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/backend-rest-api/src/main/java/com/backend/api" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.backend.api" />
+      <recent name="com.backend.repository" />
+    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend-rest-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.backend.Application" />
@@ -75,7 +102,9 @@
       <workItem from="1625209629713" duration="26542000" />
       <workItem from="1625326561417" duration="4873000" />
       <workItem from="1625348016667" duration="5538000" />
-      <workItem from="1625391642353" duration="2466000" />
+      <workItem from="1625391642353" duration="3687000" />
+      <workItem from="1625469537369" duration="3932000" />
+      <workItem from="1625474586342" duration="11586000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1625083636579</created>
@@ -126,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625173077867</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="New Item created from is ready to post backend">
+      <created>1625394524488</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1625394524488</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +188,7 @@
     <MESSAGE value="Last version before the meeting" />
     <MESSAGE value="Test data is changed with given model" />
     <MESSAGE value="2 more changes from prev commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 more changes from prev commit" />
+    <MESSAGE value="New Item created from is ready to post backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Item created from is ready to post backend" />
   </component>
 </project>

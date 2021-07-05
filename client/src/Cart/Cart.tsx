@@ -3,35 +3,43 @@ import {Wrapper} from "./Cart.style";
 import {CartItemType} from "../App";
 import Button from "@material-ui/core/Button";
 import CreateIcon from '@material-ui/icons/Create';
-import { StyledButton } from "../App.style";
+
 import React from "react";
 import axios from "axios";
-import ItemService from "../services/ItemService";
-import {create} from "domain";
-
-type Props = {
-    //cartItems: CartItemType[];
-    cartItem: CartItemType;
-    addToCart: (clickedItem: CartItemType, propID) => void; //Adding to Cart
-};
-
 
 
 const Cart: any= ({cartItem, addToCart, createdFrom}) => {
 
     const saveItem = () => {
         console.log(cartItem);
-        // if(!cartItem.feature1){
-        //     return alert("Feature 1 must be selected");
-        // }
+        console.log("createdForm: ", createdFrom);
         axios.post('http://localhost:8080/api/item',
             cartItem
         ).then(r => {
+            console.log(createdFrom);
+            axios.get<CartItemType>('http://localhost:8080/api/itemLast').then((response) => {
+                console.log(typeof response.data.id);
+
+                createdFrom.itemId = response.data.id;
+                console.log(response.data);
+
+                axios.post('http://localhost:8080/api/createdFrom',createdFrom
+
+                ).then(r2 => {
+                    console.log(r2)
+                }, error => {
+                    console.log("error on createdFrom ");
+                    console.log(error)
+                })
+
+            })
             console.log(r);
+
+        }, error => {
+            console.log(error)
         })
 
-        // alert("Item is created from\n" + JSON.stringify(createdFrom));
-        console.log(createdFrom)
+
     };
 
     return (

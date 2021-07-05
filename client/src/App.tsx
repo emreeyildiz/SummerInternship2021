@@ -1,16 +1,12 @@
-import {useQuery} from "react-query";
 import Item from'./Item/Item'
 import Drawer from "@material-ui/core/Drawer";
-import LinearProgress from "@material-ui/core/LinearProgress";
 import Grid from '@material-ui/core/Grid'
 //Style
 import {Wrapper, StyledButton, ButtonWrapper} from './App.style'
 import FiberNewSharpIcon from '@material-ui/icons/FiberNewSharp'
 import Cart from './Cart/Cart'
 import "./App.css";
-import React, {useState, Dispatch, useEffect, Component} from 'react';
-import {makeStyles} from "@material-ui/core";
-//import list from './data/MOCK_DATA-2.json'
+import React, {useState, useEffect} from 'react';
 import axios from "axios";
 
 
@@ -44,19 +40,9 @@ export interface Type {
     typeAttribute4: string;
 }
 
-export interface Serializable {
-}
-
-export type Source = "SOURCE1" | "SOURCE2" | "SOURCE3" | "";
-
-export type CategoryEnum = "CATEGORY1" | "CATEGORY2" | "CATEGORY3" | "";
-
-export type HostilityStatus = "FRIEND" | "NEUTRAL" | "FAKER" | "HOSTILE" | "UNKNOWN" | "";
-
-
 export type itemListContent = {
     id: string;
-
+    itemId: string;
     "categoryEnum": string;
     name: string;
     "comment": string;
@@ -72,19 +58,31 @@ export type itemListContent = {
     "typeAttribute3": string;
     "typeAttribute4": string;
 
-    "sourceList": sourceKey[];
+    "sourceList": sourceKey;
 
 }
-
 export type sourceKey ={
     SOURCE1: string;
     SOURCE2: string;
     SOURCE3: string;
 }
 
+export interface Serializable {
+}
+
+export type Source = "SOURCE1" | "SOURCE2" | "SOURCE3" | "";
+
+export type CategoryEnum = "CATEGORY1" | "CATEGORY2" | "CATEGORY3" | "";
+
+export type HostilityStatus = "FRIEND" | "NEUTRAL" | "FAKER" | "HOSTILE" | "UNKNOWN" | "";
+
+
+
+
 const App =() =>{
 
     const [cartOpen, setCartOpen] = useState(false);
+    const [itemList, setItemList] = useState<CartItemType[]>([]);
     const [cartItem, setCartItem] = useState<CartItemType>({
         id: "",
         "core": {
@@ -109,7 +107,6 @@ const App =() =>{
     });
 
 
-    const [itemList, setItemList] = useState<CartItemType[]>([]);
     const [createdFrom, setCreatedFrom] = useState<itemListContent>(
         {
             id: "",
@@ -124,7 +121,8 @@ const App =() =>{
                 "typeAttribute2": "",
                 "typeAttribute3": "",
                 "typeAttribute4": "",
-            "sourceList": []
+            "sourceList": null,
+            "itemId": ""
         }
     );
 
@@ -132,45 +130,9 @@ const App =() =>{
         console.log(JSON.stringify(item) + " \n\n" + JSON.stringify(clickedItem) + " \n\n key: " + key + " \n\n typeString: " + typeString)
 
 
-
-
-
-        // y = createdFrom.coreList;
-        // check = y.find(element => element == clickedItem)
-        // if(!check){
-        //     y.push(clickedItem)
-        //     setCreatedFrom({...createdFrom, coreList : y});
-        // }
-        //
-        // y = createdFrom.statusList;
-        // check = y.find(element => element == clickedItem)
-        // if(!check){
-        //     y.push(clickedItem)
-        //     setCreatedFrom({...createdFrom, statusList : y});
-        //
-        // }
-        //
-        // y = createdFrom.typeList;
-        // check = y.find(element => element == clickedItem)
-        // if(!check){
-        //     y.push(clickedItem)
-        //     setCreatedFrom({...createdFrom, typeList : y});
-        //
-        // }
-        //
-        // y = createdFrom.sourceList;
-        // check = y.find(element => element == clickedItem)
-        // if(!check){
-        //     y.push(clickedItem)
-        // }
-
         if(typeString === "sourceList"){
-            // setCartItem(prevItem =>({
-            //     ...prevItem,
-            //     sourceList: [...prevItem.sourceList, key]
-            // }));
             let x = cartItem.sourceList;
-            let check = x.find(element => element == key)
+            let check = x.find(element => element === key)
             if(!check){
                 x.push(key);
                 setCartItem({...cartItem, sourceList : x});
@@ -194,7 +156,6 @@ const App =() =>{
     };
 
     useEffect(() => {
-        // Use [] as second argument in useEffect for not rendering each time
         axios.get<CartItemType[]>('http://localhost:8080/api/item')
             .then((response) => {
                  setItemList(response.data);
@@ -220,8 +181,8 @@ const App =() =>{
         </ButtonWrapper>
 
         <Grid container spacing={2}>
-            {itemList && itemList.map(item => (
-                <Grid item key = {1} xs ={12} sm = {3}>
+            {itemList && itemList.map((item, index)  => (
+                <Grid item key = {index} xs ={12} sm = {3}>
                     <Item item={item }  handleAddToCart={handleAddToCart} />
                 </Grid>
             ))}
