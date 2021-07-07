@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4c0616a-1fef-4660-92f4-45e75905c286" name="Default Changelist" comment="New Item data post to backend and all warnings are handled in frontend">
+    <list default="true" id="d4c0616a-1fef-4660-92f4-45e75905c286" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/com/backend/repository/ItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend-rest-api/target/classes/com/backend/repository/ItemRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Cart/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Item/Item.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,19 +54,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend-rest-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.backend.Application" />
@@ -96,7 +82,8 @@
       <workItem from="1625348016667" duration="5538000" />
       <workItem from="1625391642353" duration="3687000" />
       <workItem from="1625469537369" duration="3932000" />
-      <workItem from="1625474586342" duration="13643000" />
+      <workItem from="1625474586342" duration="13958000" />
+      <workItem from="1625664345035" duration="3027000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1625083636579</created>
@@ -161,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625492077551</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Version on meeting 5 July">
+      <created>1625494275212</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1625494275213</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +183,7 @@
     <MESSAGE value="2 more changes from prev commit" />
     <MESSAGE value="New Item created from is ready to post backend" />
     <MESSAGE value="New Item data post to backend and all warnings are handled in frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Item data post to backend and all warnings are handled in frontend" />
+    <MESSAGE value="Version on meeting 5 July" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version on meeting 5 July" />
   </component>
 </project>

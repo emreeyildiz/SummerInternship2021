@@ -1,6 +1,6 @@
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
-import React from 'react';
+import React, {useState} from 'react';
 //Types
 import {Wrapper} from "./Item.style";
 
@@ -20,30 +20,46 @@ const StyledButton = withStyles({
   })(Button);
 
 
-const Item: any = (data) => (
-   <Wrapper>
 
+const Item: any = (data) => (
+
+
+<Wrapper>
+       {console.log("\nCreated From: " ,data.createdFrom)}
        <h2> Core </h2>
 
        <ul>
-           {Object.keys(data.item.core).map((sub,index)=>
-               <li key = {index} > <StyledButton onClick = {() =>data.handleAddToCart(data.item,data.item.core, "core", sub)}>{sub}: {data.item.core[sub]}</StyledButton></li>
+           {Object.keys(data.item.core).map(function (sub,index){
+               let disable = false;
+               if(data.createdFrom[sub] === data.item.id)
+                    disable = true;
+                   return <li key = {index} > <StyledButton disabled = {disable} onClick = {() =>data.handleAddToCart(data.item,data.item.core, "core", sub)}>{sub}: {data.item.core[sub]}</StyledButton></li>
+               }
            )}
 
        </ul>
        <h2> Status </h2>
 
        <ul>
-           {Object.keys(data.item.status).map((sub, index)=>
-               <li key = {index} > <StyledButton onClick = {() =>data.handleAddToCart(data.item,data.item.status, "status", sub)}>{sub}: {data.item.status[sub]}</StyledButton></li>
+           {Object.keys(data.item.status).map(function (sub, index){
+               let disable = false;
+               if(data.createdFrom[sub] === data.item.id)
+                    disable = true;
+               return <li key = {index} > <StyledButton disabled = {disable} onClick = {() =>data.handleAddToCart(data.item,data.item.status, "status", sub)}>{sub}: {data.item.status[sub]}</StyledButton></li>
+           }
            )}
 
        </ul>
        <h2> Type </h2>
 
        <ul>
-           {Object.keys(data.item.type).map((sub, index)=>
-               <li key = {index} ><StyledButton onClick = {() =>data.handleAddToCart(data.item,data.item.type, "type", sub)}>{sub}: {data.item.type[sub]}</StyledButton></li>
+           {Object.keys(data.item.type).map(function (sub, index){
+               let disable = false;
+               if(data.createdFrom[sub] === data.item.id)
+                   disable = true;
+               return <li key = {index} ><StyledButton disabled = {disable} onClick = {() =>data.handleAddToCart(data.item,data.item.type, "type", sub)}>{sub}: {data.item.type[sub]}</StyledButton></li>
+
+               }
            )}
 
        </ul>

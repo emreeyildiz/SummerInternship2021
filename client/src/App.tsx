@@ -106,7 +106,7 @@ const App =() =>{
         "sourceList": []
 
     });
-
+    const [disable, setDisable] = useState(false);
 
     const [createdFrom, setCreatedFrom] = useState<itemListContent>(
         {
@@ -163,7 +163,7 @@ const App =() =>{
                  setItemList(response.data);
                 console.log(response.data);
             });
-    }, []);
+    }, [createdFrom]);
 
     if(itemList.length === 0){
         return <LinearProgress/>
@@ -187,7 +187,7 @@ const App =() =>{
         <Grid container spacing={2}>
             {itemList && itemList.map((item, index)  => (
                 <Grid item key = {index} xs ={12} sm = {3}>
-                    <Item item={item }  handleAddToCart={handleAddToCart} />
+                    <Item item={item }  handleAddToCart={handleAddToCart} createdFrom = {createdFrom} disable = {disable}/>
                 </Grid>
             ))}
         </Grid>
