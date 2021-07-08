@@ -6,6 +6,9 @@ import CreateIcon from '@material-ui/icons/Create';
 
 import React from "react";
 import axios from "axios";
+import {MuiThemeProvider} from "@material-ui/core";
+import {createMuiTheme} from "@material-ui/core/styles";
+
 
 
 const Cart: any= ({cartItem, addToCart, createdFrom}) => {
@@ -42,21 +45,18 @@ const Cart: any= ({cartItem, addToCart, createdFrom}) => {
     };
 
     return (
-        <Wrapper>
-            <CartItem
-                      item={cartItem}
-                      addToCart = {addToCart}
-            />
+            <Wrapper>
+                <CartItem
+                    item={cartItem}
+                    addToCart = {addToCart}
+                />
 
-            <Button color = "primary" onClick={() => saveItem()}>
-                Create
-                <CreateIcon/>
-            </Button>
+                <Button color = "primary" onClick={() => saveItem()}>
+                    Create
+                    <CreateIcon/>
+                </Button>
 
-        </Wrapper>
-
-
-
+            </Wrapper>
 
     )
 }

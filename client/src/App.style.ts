@@ -27,4 +27,5 @@ export const StyledButton = styled(IconButton)`
   z-index: 100;
   top: 20px;
   left: 20px;
+  color: #9042f5;
 `;

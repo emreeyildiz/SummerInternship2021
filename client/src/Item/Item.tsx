@@ -1,55 +1,45 @@
 import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
+import {MuiThemeProvider, withStyles} from '@material-ui/core/styles';
 import React, {useEffect, useState} from 'react';
 //Types
 import {Wrapper} from "./Item.style";
-import axios from "axios";
-import {CartItemType} from "../App";
+import {createMuiTheme} from "@material-ui/core/styles";
+import { ThemeProvider } from '@material-ui/styles';
+import {Typography} from "@material-ui/core";
 
-const StyledButton = withStyles({
-    root: {
-      borderRadius: 3,
-      border: 0,
-      color: '#0f3c54',
-      height: 7,
-      padding: '20px 0px',
-      fontSize: 14,
-
-    },
-    label: {
-      textTransform: 'capitalize',
-    },
-  })(Button);
-
+// const StyledButton = withStyles({
+//     root: {
+//       borderRadius: 3,
+//       border: 0,
+//       color: '#0f3c54',
+//       height: 7,
+//       padding: '20px 0px',
+//       fontSize: 14,
+//
+//     },
+//     label: {
+//       textTransform: 'capitalize',
+//     },
+//   })(Button);
 
 
 
 const Item: any = (data) => {
-    const [disable, setDisable] = useState(false);
-
-    const isDisabled = (x, y) => {
-        if(x === y)
-            return true;
-        return false;
-    }
-
-
-
 
     return(
     <Wrapper>
-
+        <MuiThemeProvider theme={data.theme}>
         <h2> Core </h2>
 
         <ul>
             {Object.keys(data.item.core).map(function (sub, index) {
-                 // setDisable(false);
-                //
-                // if (data.createdFrom[sub] === data.item.id)
-                //     setDisable(true);
+                let disable = false;
 
-                return <li key={index}><StyledButton disabled={disable}
-                                                         onClick={() => {data.handleAddToCart(data.item, data.item.core, "core", sub); setDisable(true); }} >{sub}: {data.item.core[sub]}</StyledButton>
+                if (data.createdFrom[sub] === data.item.id)
+                    disable = true;
+
+                return <li key={index}><Button color = {disable===true ? "primary" : "secondary"}
+                                                         onClick={() => data.handleAddToCart(data.item, data.item.core, "core", sub)}><Typography variant = "body1">  {sub}: {data.item.core[sub]}</Typography></Button>
                     </li>
                 }
             )}
@@ -63,8 +53,8 @@ const Item: any = (data) => {
                 if (data.createdFrom[sub] === data.item.id)
                     disable = true;
 
-                return <li key={index}><StyledButton disabled={disable}
-                                                         onClick={() => data.handleAddToCart(data.item, data.item.status, "status", sub)}>{sub}: {data.item.status[sub]}</StyledButton>
+                return <li key={index}><Button color =  {disable===true ? "primary" : "secondary"}
+                                                         onClick={() => data.handleAddToCart(data.item, data.item.status, "status", sub)}><Typography>{sub}: {data.item.status[sub]}</Typography></Button>
                     </li>
                 }
             )}
@@ -77,8 +67,8 @@ const Item: any = (data) => {
                     let disable = false;
                     if (data.createdFrom[sub] === data.item.id)
                         disable = true;
-                    return <li key={index}><StyledButton disabled={disable}
-                                                         onClick={() => data.handleAddToCart(data.item, data.item.type, "type", sub)}>{sub}: {data.item.type[sub]}</StyledButton>
+                    return <li key={index}><Button color =  {disable===true ? "primary" : "secondary"}
+                                                         onClick={() => data.handleAddToCart(data.item, data.item.type, "type", sub)}><Typography>{sub}: {data.item.type[sub]}</Typography></Button>
                     </li>
 
                 }
@@ -88,13 +78,20 @@ const Item: any = (data) => {
         <h2> SourceList </h2>
 
         <ul>
-            {(data.item.sourceList).map((sub, index) =>
-                <li key={index}><StyledButton
-                    onClick={() => data.handleAddToCart(data.item, data.item.sourceList, "sourceList", sub)}>{sub}</StyledButton>
-                </li>
+            {(data.item.sourceList).map(function (sub, index) {
+
+                let disable = false;
+                 if(data.createdFrom.sourceList && data.createdFrom.sourceList[sub] === data.item.id)
+                     disable = true;
+                    return (<li key={index}><Button color =  {disable===true ? "primary" : "secondary"}
+                        onClick={() => data.handleAddToCart(data.item, data.item.sourceList, "sourceList", sub)}><Typography>{sub}</Typography></Button>
+                    </li>);
+                }
             )}
 
+
         </ul>
+        </MuiThemeProvider>
     </Wrapper>
     );
 

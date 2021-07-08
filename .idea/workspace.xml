@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4c0616a-1fef-4660-92f4-45e75905c286" name="Default Changelist" comment="workspace.xmk changed">
+    <list default="true" id="d4c0616a-1fef-4660-92f4-45e75905c286" name="Default Changelist" comment="8 July Meeting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Cart/Cart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Item/Item.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +86,7 @@
       <workItem from="1625469537369" duration="3932000" />
       <workItem from="1625474586342" duration="13958000" />
       <workItem from="1625664345035" duration="3346000" />
-      <workItem from="1625727161182" duration="2745000" />
+      <workItem from="1625727161182" duration="11205000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1625083636579</created>
@@ -170,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625727355889</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="8 July Meeting">
+      <created>1625730517139</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1625730517143</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +210,7 @@
     <MESSAGE value="Version on meeting 5 July" />
     <MESSAGE value="Button functionally disabled when pressed but not disable in ui" />
     <MESSAGE value="workspace.xmk changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xmk changed" />
+    <MESSAGE value="8 July Meeting" />
+    <option name="LAST_COMMIT_MESSAGE" value="8 July Meeting" />
   </component>
 </project>

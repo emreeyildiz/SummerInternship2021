@@ -8,7 +8,8 @@ import Cart from './Cart/Cart'
 import "./App.css";
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
-import {LinearProgress} from "@material-ui/core";
+import {LinearProgress, MuiThemeProvider} from "@material-ui/core";
+import {createMuiTheme} from "@material-ui/core/styles";
 
 
 
@@ -79,6 +80,35 @@ export type HostilityStatus = "FRIEND" | "NEUTRAL" | "FAKER" | "HOSTILE" | "UNKN
 
 
 
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            light:'#ff0000',
+            main: '#ff0000',
+            dark: '#ff0000',
+            contrastText: '#ff0000',
+        },
+        secondary: {
+
+            //main: '#0f3c54',
+            light:'#0f3c54',
+            main: '#0f3c54',
+            dark: '#0f3c54',
+            contrastText: '#0f3c54',
+
+        },
+        // error: will use the default color
+    },
+
+    typography: {
+        body1: {
+            fontFamily: "Arial, Helvetica, sans-serif",
+            fontSize: 14.5
+        }
+    }
+});
+
+
 
 const App =() =>{
 
@@ -136,23 +166,55 @@ const App =() =>{
             if(!check){
                 x.push(key);
                 setCartItem({...cartItem, sourceList : x});
+                setCreatedFrom(prevItem =>({
+                    ...prevItem,
+                    sourceList: {...prevItem.sourceList, [key]: item.id}
+                }));
 
             }
-            setCreatedFrom(prevItem =>({
-                ...prevItem,
-                sourceList: {...prevItem.sourceList, [key]: item.id}
-            }));
+            else{
+
+                if(createdFrom.sourceList[key] === item.id){
+                    x.forEach((element, index) =>{
+                        if(element === key)
+                            x.splice(index,1);
+                    });
+                    setCartItem({...cartItem, sourceList : x});
+                    setCreatedFrom(prevItem =>({
+                        ...prevItem,
+                        sourceList: {...prevItem.sourceList, [key]: undefined}
+                    }));
+
+                }
+                else{
+                    setCreatedFrom(prevItem =>({
+                        ...prevItem,
+                        sourceList: {...prevItem.sourceList, [key]: item.id}
+                    }));
+                }
+            }
+
         }
         else{
-            setCartItem(prevItem =>({
-                ...prevItem,
-                [typeString]: {...prevItem[typeString], [key]: clickedItem[key]}
-            }));
-            setCreatedFrom({...createdFrom, [key]: item.id})
+            console.log(cartItem[typeString][key])
+            console.log(clickedItem[key])
+            if(createdFrom[key] === item.id){
+                setCartItem(prevItem =>({
+                    ...prevItem,
+                    [typeString]: {...prevItem[typeString], [key]: ""}
+                }));
+                setCreatedFrom({...createdFrom, [key]: ""})
+            }
+            else{
+                setCartItem(prevItem =>({
+                    ...prevItem,
+                    [typeString]: {...prevItem[typeString], [key]: clickedItem[key]}
+                }));
+                setCreatedFrom({...createdFrom, [key]: item.id})
+            }
         }
 
         console.log(cartItem);
-        console.log(clickedItem[key]);
 
     };
 
@@ -169,6 +231,7 @@ const App =() =>{
     }
 
     return (
+        <MuiThemeProvider theme={theme}>
         <Wrapper>
         <Drawer anchor = 'right' open= {cartOpen} onClose={() => setCartOpen(false)}>
             <Cart
@@ -178,7 +241,7 @@ const App =() =>{
             />
         </Drawer>
         <ButtonWrapper>
-            <StyledButton size = "medium" color = "secondary" onClick={() => setCartOpen(true)}>
+            <StyledButton size = "medium" onClick={() => setCartOpen(true)}>
                 <FiberNewSharpIcon/>
             </StyledButton>
         </ButtonWrapper>
@@ -186,11 +249,12 @@ const App =() =>{
         <Grid container spacing={2}>
             {itemList && itemList.map((item, index)  => (
                 <Grid item key = {index} xs ={12} sm = {3}>
-                    <Item item={item }  handleAddToCart={handleAddToCart} createdFrom = {createdFrom} />
+                    <Item item={item }  handleAddToCart={handleAddToCart} createdFrom = {createdFrom} theme = {theme}/>
                 </Grid>
             ))}
         </Grid>
     </Wrapper>
+        </MuiThemeProvider>
     );
 }
 
