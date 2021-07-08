@@ -34,34 +34,68 @@ const Item: any = (data) => {
     <Wrapper>
         <MuiThemeProvider theme={data.theme}>
         {Object.keys(data.item).map(function(subTitle, index){
-            if(typeof data.item[subTitle] != "object" || subTitle == "sourceList")
+            if(typeof data.item[subTitle] != "object")
                 return
-
-            return <ul>
-                <ButtonHeader
-                    onClick={() =>{
-                        Object.keys(data.item[subTitle]).map(function (sub, index) {
-                                data.handleAddToCart(data.item, data.item[subTitle], subTitle.toString(), sub)
-                                console.log(sub)
-                            }
-                        )
+            //console.log(subTitle)
+            if(subTitle != "sourceList"){
+                return <ul>
+                    <ButtonHeader
+                        onClick={() =>{
+                            Object.keys(data.item[subTitle]).map(function (sub, index) {
+                                    data.handleAddToCart(data.item, data.item[subTitle], subTitle.toString(), sub)
+                                    console.log(sub)
+                                }
+                            )
 
                         }
 
-                    }
-                >{subTitle}</ButtonHeader>
-                {Object.keys(data.item[subTitle]).map(function (sub, index) {
-                        let disable = false;
+                        }
+                    >{subTitle}</ButtonHeader>
+                    {Object.keys(data.item[subTitle]).map(function (sub, index) {
+                            let disable = false;
 
-                        if (data.createdFrom[sub] === data.item.id)
-                            disable = true;
+                            if (data.createdFrom[sub] === data.item.id)
+                                disable = true;
 
-                        return <li key={index}><Button color = {disable===true ? "primary" : "secondary"}
-                                                       onClick={() => data.handleAddToCart(data.item, data.item[subTitle], subTitle.toString(), sub)}><Typography variant = "body1">  {sub}: {data.item[subTitle][sub]}</Typography></Button>
-                        </li>
-                    }
-                )}
-            </ul>
+                            return <li key={index}><Button color = {disable===true ? "primary" : "secondary"}
+                                                           onClick={() => data.handleAddToCart(data.item, data.item[subTitle], subTitle.toString(), sub)}><Typography variant = "body1">  {sub}: {data.item[subTitle][sub]}</Typography></Button>
+                            </li>
+                        }
+                    )}
+                </ul>
+
+            }
+
+            else {
+                return         <ul>
+
+                    <ButtonHeader
+                        onClick={() =>{
+                            (data.item[subTitle]).map(function (sub, index) {
+                                    data.handleAddToCart(data.item, data.item[subTitle], subTitle.toString(), sub)
+                                    console.log(sub)
+                                }
+                            )
+
+                        }
+
+                        }
+                    >{subTitle}</ButtonHeader>
+
+                    {(data.item.sourceList).map(function (sub, index) {
+
+                            let disable = false;
+                            if(data.createdFrom.sourceList && data.createdFrom.sourceList[sub] === data.item.id)
+                                disable = true;
+                            return (<li key={index}><Button color =  {disable===true ? "primary" : "secondary"}
+                                                            onClick={() => data.handleAddToCart(data.item, data.item.sourceList, "sourceList", sub)}><Typography>{sub}</Typography></Button>
+                            </li>);
+                        }
+                    )}
+
+
+                </ul>
+            }
         })}
 
         {/*<ul>*/}
@@ -108,22 +142,8 @@ const Item: any = (data) => {
         {/*    )}*/}
 
         {/*</ul>*/}
-        <h2> SourceList </h2>
-
-        <ul>
-            {(data.item.sourceList).map(function (sub, index) {
-
-                let disable = false;
-                 if(data.createdFrom.sourceList && data.createdFrom.sourceList[sub] === data.item.id)
-                     disable = true;
-                    return (<li key={index}><Button color =  {disable===true ? "primary" : "secondary"}
-                        onClick={() => data.handleAddToCart(data.item, data.item.sourceList, "sourceList", sub)}><Typography>{sub}</Typography></Button>
-                    </li>);
-                }
-            )}
 
 
-        </ul>
         </MuiThemeProvider>
     </Wrapper>
     );

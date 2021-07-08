@@ -163,6 +163,7 @@ const App =() =>{
             let x = cartItem.sourceList;
             let check = x.find(element => element === key)
             if(!check){
+                console.log("sa")
                 x.push(key);
                 setCartItem({...cartItem, sourceList : x});
                 setCreatedFrom(prevItem =>({
