@@ -103,7 +103,7 @@ const theme = createMuiTheme({
     typography: {
         body1: {
             fontFamily: "Arial, Helvetica, sans-serif",
-            fontSize: 14.5
+            fontSize: 14.5,
         }
     }
 });
@@ -159,7 +159,6 @@ const App =() =>{
     const handleAddToCart = (item,clickedItem, typeString, key) => {
         console.log(JSON.stringify(item) + " \n\n" + JSON.stringify(clickedItem) + " \n\n key: " + key + " \n\n typeString: " + typeString)
 
-
         if(typeString === "sourceList"){
             let x = cartItem.sourceList;
             let check = x.find(element => element === key)
@@ -196,25 +195,35 @@ const App =() =>{
 
         }
         else{
-            console.log(cartItem[typeString][key])
+            console.log(cartItem[typeString])
             console.log(clickedItem[key])
             if(createdFrom[key] === item.id){
                 setCartItem(prevItem =>({
                     ...prevItem,
                     [typeString]: {...prevItem[typeString], [key]: ""}
                 }));
-                setCreatedFrom({...createdFrom, [key]: ""})
+                setCreatedFrom(prevItem =>({
+                    ...prevItem,[key]: ""
+                }));
             }
             else{
                 setCartItem(prevItem =>({
                     ...prevItem,
                     [typeString]: {...prevItem[typeString], [key]: clickedItem[key]}
                 }));
-                setCreatedFrom({...createdFrom, [key]: item.id})
+                console.log(key, item.id)
+                // console.log("-------1------",key,createdFrom)
+
+                setCreatedFrom(prevItem =>({
+                    ...prevItem,[key]: item.id
+                }));
+
+                //setCreatedFrom({...createdFrom, [key]: item.id})
+                // console.log("------2-------",createdFrom)
             }
         }
-
-        console.log(cartItem);
+        //setCreatedFrom({...createdFrom, comment : "asdkasdk"})
+        console.log(createdFrom);
 
     };
 

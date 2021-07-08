@@ -7,20 +7,24 @@ import {createMuiTheme} from "@material-ui/core/styles";
 import { ThemeProvider } from '@material-ui/styles';
 import {Typography} from "@material-ui/core";
 
-// const StyledButton = withStyles({
-//     root: {
-//       borderRadius: 3,
-//       border: 0,
-//       color: '#0f3c54',
-//       height: 7,
-//       padding: '20px 0px',
-//       fontSize: 14,
-//
-//     },
-//     label: {
-//       textTransform: 'capitalize',
-//     },
-//   })(Button);
+const ButtonHeader = withStyles({
+    root: {
+        borderRadius: 3,
+        border: 0,
+        color: '#32a6a8',
+        height: 7,
+        padding: '20px 0px',
+        fontSize: 22,
+        fontFamily: "Arial, Helvetica, sans-serif",
+        textAlign: "center",
+        textDecoration: "underline",
+        marginBottom: '10px'
+
+    },
+    label: {
+      textTransform: 'capitalize',
+    },
+  })(Button);
 
 
 
@@ -29,52 +33,81 @@ const Item: any = (data) => {
     return(
     <Wrapper>
         <MuiThemeProvider theme={data.theme}>
-        <h2> Core </h2>
+        {Object.keys(data.item).map(function(subTitle, index){
+            if(typeof data.item[subTitle] != "object" || subTitle == "sourceList")
+                return
 
-        <ul>
-            {Object.keys(data.item.core).map(function (sub, index) {
-                let disable = false;
+            return <ul>
+                <ButtonHeader
+                    onClick={() =>{
+                        Object.keys(data.item[subTitle]).map(function (sub, index) {
+                                data.handleAddToCart(data.item, data.item[subTitle], subTitle.toString(), sub)
+                                console.log(sub)
+                            }
+                        )
 
-                if (data.createdFrom[sub] === data.item.id)
-                    disable = true;
+                        }
 
-                return <li key={index}><Button color = {disable===true ? "primary" : "secondary"}
-                                                         onClick={() => data.handleAddToCart(data.item, data.item.core, "core", sub)}><Typography variant = "body1">  {sub}: {data.item.core[sub]}</Typography></Button>
-                    </li>
-                }
-            )}
+                    }
+                >{subTitle}</ButtonHeader>
+                {Object.keys(data.item[subTitle]).map(function (sub, index) {
+                        let disable = false;
 
-        </ul>
-        <h2> Status </h2>
+                        if (data.createdFrom[sub] === data.item.id)
+                            disable = true;
 
-        <ul>
-            {Object.keys(data.item.status).map(function (sub, index) {
-                let disable = false;
-                if (data.createdFrom[sub] === data.item.id)
-                    disable = true;
+                        return <li key={index}><Button color = {disable===true ? "primary" : "secondary"}
+                                                       onClick={() => data.handleAddToCart(data.item, data.item[subTitle], subTitle.toString(), sub)}><Typography variant = "body1">  {sub}: {data.item[subTitle][sub]}</Typography></Button>
+                        </li>
+                    }
+                )}
+            </ul>
+        })}
 
-                return <li key={index}><Button color =  {disable===true ? "primary" : "secondary"}
-                                                         onClick={() => data.handleAddToCart(data.item, data.item.status, "status", sub)}><Typography>{sub}: {data.item.status[sub]}</Typography></Button>
-                    </li>
-                }
-            )}
+        {/*<ul>*/}
+        {/*    {Object.keys(data.item.core).map(function (sub, index) {*/}
+        {/*        let disable = false;*/}
 
-        </ul>
-        <h2> Type </h2>
+        {/*        if (data.createdFrom[sub] === data.item.id)*/}
+        {/*            disable = true;*/}
 
-        <ul>
-            {Object.keys(data.item.type).map(function (sub, index) {
-                    let disable = false;
-                    if (data.createdFrom[sub] === data.item.id)
-                        disable = true;
-                    return <li key={index}><Button color =  {disable===true ? "primary" : "secondary"}
-                                                         onClick={() => data.handleAddToCart(data.item, data.item.type, "type", sub)}><Typography>{sub}: {data.item.type[sub]}</Typography></Button>
-                    </li>
+        {/*        return <li key={index}><Button color = {disable===true ? "primary" : "secondary"}*/}
+        {/*                                                 onClick={() => data.handleAddToCart(data.item, data.item.core, "core", sub)}><Typography variant = "body1">  {sub}: {data.item.core[sub]}</Typography></Button>*/}
+        {/*            </li>*/}
+        {/*        }*/}
+        {/*    )}*/}
 
-                }
-            )}
+        {/*</ul>*/}
+        {/*<h2> Status </h2>*/}
 
-        </ul>
+        {/*<ul>*/}
+        {/*    {Object.keys(data.item.status).map(function (sub, index) {*/}
+        {/*        let disable = false;*/}
+        {/*        if (data.createdFrom[sub] === data.item.id)*/}
+        {/*            disable = true;*/}
+
+        {/*        return <li key={index}><Button color =  {disable===true ? "primary" : "secondary"}*/}
+        {/*                                                 onClick={() => data.handleAddToCart(data.item, data.item.status, "status", sub)}><Typography>{sub}: {data.item.status[sub]}</Typography></Button>*/}
+        {/*            </li>*/}
+        {/*        }*/}
+        {/*    )}*/}
+
+        {/*</ul>*/}
+        {/*<h2> Type </h2>*/}
+
+        {/*<ul>*/}
+        {/*    {Object.keys(data.item.type).map(function (sub, index) {*/}
+        {/*            let disable = false;*/}
+        {/*            if (data.createdFrom[sub] === data.item.id)*/}
+        {/*                disable = true;*/}
+        {/*            return <li key={index}><Button color =  {disable===true ? "primary" : "secondary"}*/}
+        {/*                                                 onClick={() => data.handleAddToCart(data.item, data.item.type, "type", sub)}><Typography>{sub}: {data.item.type[sub]}</Typography></Button>*/}
+        {/*            </li>*/}
+
+        {/*        }*/}
+        {/*    )}*/}
+
+        {/*</ul>*/}
         <h2> SourceList </h2>
 
         <ul>
